@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  bot:
+    #entrypoint: [bin/entry]
+    build: .
+    #command: rails s
+    volumes:
+      - '.:/app'
