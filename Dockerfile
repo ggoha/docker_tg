@@ -7,9 +7,9 @@ RUN apk --update --no-cache add \
 RUN mkdir /app
 WORKDIR /app
 
-ADD Gemfile* /app/
+ADD Gemfile* ./
 RUN bundle install --binstubs
 
-ADD . /app/
+ADD . .
 
-CMD ["rake", "telegram:bot:poller"]
+CMD rake telegram:bot:poller
